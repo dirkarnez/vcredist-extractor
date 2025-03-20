@@ -382,6 +382,20 @@ def fetch_all(base_directory, include_old_versions):
         for cab in find_cabs(extract_burn_bundle(wix_tool_location, installer)):
             extract_cab(cab, output_directory)
 
+# import os
+# import zipfile
+    
+# def zipdir(path, ziph):
+#     # ziph is zipfile handle
+#     for root, dirs, files in os.walk(path):
+#         for file in files:
+#             ziph.write(os.path.join(root, file), 
+#                        os.path.relpath(os.path.join(root, file), 
+#                                        os.path.join(path, '..')))
+
+# with zipfile.ZipFile('Python.zip', 'w', zipfile.ZIP_DEFLATED) as zipf:
+#     zipdir('tmp/', zipf)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
